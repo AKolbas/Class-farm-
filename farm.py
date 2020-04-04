@@ -93,6 +93,29 @@ class Duck(Animal):
 
 duck_1 = Duck('утка', 'Кряква', 'кря', '5')
 
+animal_list = {'гусь_1': 5, 'гусь_2': 8, 'корова': 500, 'овца_1': 50, 'овца': 55, 'курица_1': 5, 'курица_2': 5,
+               'коза_1': 40, 'коза_2': 40, 'утка': 5}
+#animal_list = [goose_1, goose_2, cow, sheep_1, sheep_2, chicken_1, chicken_2, coat_1, coat_2, duck_1]
+
+def sum_weight():
+    sum_w = 0
+    for i in animal_list.values():
+        sum_w += i
+    print('Общий вес всех животных: ' + str(sum_w) + ' kg')
+
+sum_weight()
+print(type(animal_list))
+
+def max_weight():
+    #animal_weight_list = []
+    x = max(list(animal_list.values()))
+    print(x)
+    for animal, weight in animal_list.items():
+        if weight == x:
+            print(f'Больше всех весит {animal} - {weight} кг')
+
+#max_weight()
+
 
 
 
